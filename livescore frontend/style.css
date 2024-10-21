@@ -1,0 +1,286 @@
+body {
+  background-color: rgb(24, 23, 23);
+  width: 80%;
+  margin: auto;
+}
+
+/* for "navlogo_and_menu names" , livescore , score, favoourite , news, get the app  */
+.navlogo_and_menu {
+  margin: 0;
+
+  padding: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(66, 65, 65);
+
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  /* it used for all lists consider this when you use li as call, calling using its class name for overaccess  */
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.nav_icon,
+.fav_icon {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 20px; /* Adjust icon size */
+}
+
+/* ??? know which part this indicate*/
+.icon-text {
+  color: white;
+  display: flex;
+  font-size: 18px; /* Adjust font size as needed */
+  margin: 20px 0; /* Space between items */
+  padding: 10px;
+}
+
+a:active,
+a:focus {
+  color: orangered;
+}
+a[id="menu_icon"]:hover {
+  color: white; /* it overlap the nav_icon */
+}
+
+#logo_name {
+  color: white;
+  font-size: large;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* for "navlogo_and_menu names" color change ,text style , livescore , score, favoourite , news, get the app   for */
+a {
+  color: #aaa;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+/* for 2nd header - "types_of_games " different games button and language changer   */
+.types_of_games_container {
+  display: flex;
+  justify-content: space-between; /* Space between content and button */
+  align-items: center; /* Center items vertically */
+  padding: 0px 0px; /* Padding around the container */
+}
+#game {
+  margin: 18px;
+  margin-left: 0;
+  padding: 10px;
+  background-color: rgb(50, 49, 49);
+  border: 1px solid #000000;
+  border-radius: 15px;
+  color: #aaa;
+}
+
+#game:active,
+#game:focus {
+  background-color: white;
+  color: black;
+}
+
+/* for "language changer" inside different games button   */
+
+.language-changer {
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 18px; /* Font size for text */
+  padding: 10px; /* Padding for the button */
+  border: 1px solid #000000; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #0d0d0d; /* Button background color */
+  color: white; /* Text color */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.language-changer:hover {
+  background-color: #aaa; /* Darker background on hover */
+}
+
+.lang-icon {
+  margin-right: 5px; /* Space between icon and text */
+}
+.language-name {
+  font-size: 15px;
+}
+
+/* for left_option_container and menu_content_container */
+
+.content_container {
+  display: flex;
+  gap: 20px; /* Set space between items */
+  justify-content: flex-start; /* Align items to the start */
+}
+
+/* for left menu all (search ,region , competioin , teams ) */
+
+.left_option_container,
+.menu_content_container {
+  width: 25%;
+  height: 100%;
+  margin: 0;
+  border: 1px solid rgb(66, 65, 65);
+  border-radius: 10px;
+}
+
+/* for menu_content_container (date and time  ,games content  ) */
+.menu_content_container {
+  width: 50%;
+}
+
+/* for left menu  (search and icon )*/
+
+.search_menu_option {
+  display: flex;
+  border-bottom: 1px solid rgb(66, 65, 65); /* fix the border buttom with for 100%  */
+}
+
+/* for left menu  (search icon )*/
+.search_icon {
+  padding: 15px; /* Optional: removes padding */
+
+  color: #aaa;
+  font-weight: 2px;
+}
+
+/* for left menu  (search  )*/
+#search_input {
+  padding-left: 15px; /*  increases left  padding */
+
+  background-color: rgb(24, 23, 23);
+  color: #aaa;
+  border: none;
+
+  outline: none;
+}
+
+/* for left menu all lists  (region , competioin , teams )  TO MAKE VERTICALLY ( COLUMN ) */
+/* for all_list_of_menu_content   (region , competioin , teams )  TO MAKE VERTICALLY ( COLUMN ) */
+.all_list_of_left_options,
+.all_list_of_menu_content {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* for left menu all lists and each item  (region , competioin , teams ) TO MAKE HORIZONTAL THEIR LISTS IN EACH ITEM AND change some properties of EACH ITEM */
+/* and for all_list_of_menu_content */
+.all_list_of_left_options li,
+.list_of_menu_content {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Padding around the container */
+
+  /*border-bottom: 1px solid rgb(66, 65, 65); /* fix the border buttom with for 100%  */
+  color: #aaa;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: small;
+}
+.list_of_menu_content {
+  border: none;
+}
+
+.different_countries {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between;
+
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+.different_countries button {
+  background-color: rgb(29, 29, 29);
+  margin: 2px;
+  border: none;
+  color: #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+.different_countries button:hover {
+  background-color: rgb(66, 65, 65);
+}
+
+/* for date_menu_list (live,dates , calender )  TO MAKE horizontal ( row ) */
+.date_menu_list {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Padding around the container */
+  border-bottom: 1px solid rgb(66, 65, 65); /* fix the border buttom with for 100%  */
+}
+
+/* for date_menu_list all dates and each item  ( date with month display ) TO MAKE vertical THEIR include IN EACH ITEM AND change some properties of EACH ITEM */
+.date_menu_list a {
+  padding: 5px; /* Padding around the container */
+
+  color: #aaa;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: small;
+  text-decoration: none;
+}
+
+.date_menu_list a:active,
+.date_menu_list a:focus {
+  color: orangered;
+}
+
+#live {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+#live :active,
+#live :focus {
+  background-color: orangered;
+}
+
+.calender-icon {
+  font-size: medium;
+}
+
+.every_game_content {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  margin: 10px; /* Padding around the container */
+  padding: 10px;
+  background-color: rgb(29, 29, 29);
+
+  border-radius: 10px;
+  color: #aaa;
+
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+.every_game_content:hover {
+  background-color: rgb(66, 65, 65);
+}
+
+/* ?? fix it ?? not working for distance between it  icon and text */
+.lgame_vs {
+  display: flex;
+  align-items: center;
+}
+
+.game_icon {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 18px; /* Adjust icon size */
+}
+
+.vs {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column; /* Enable Flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;
+}

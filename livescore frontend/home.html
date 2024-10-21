@@ -1,0 +1,232 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Football Scores, Fixtures & Results | LiveScore</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      .content {
+        color: red; /* for change - color #aaa */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- to make the separate navbar from the body -->
+    <nav class="navbar">
+      <!-- to make the division of nav all together -->
+      <div class="navdiv">
+        <ul class="navlogo_and_menu">
+          <li>
+            <a href="#" id="menu_icon" onclick="changePage('menu')"
+              ><i class="fas fa-bars nav_icon"></i>
+            </a>
+            <a href="#" id="logo_name" onclick="changePage('LiveScore')"
+              >LiveScore<sup style="font-size: xx-small">TM</sup></a
+            >
+          </li>
+
+          <li class="icon_text">
+            <a href="#" onclick="changePage('Scores')">
+              <i class="fas fa-futbol nav_icon"></i> Scores
+            </a>
+          </li>
+          <li class="icon_text">
+            <a href="#" onclick="changePage('Favourites')">
+              <i class="fas fa-star nav_icon"></i> Favourites
+            </a>
+          </li>
+
+          <li class="icon_text">
+            <a href="#" onclick="changePage('News')"
+              ><i class="fas fa-newspaper nav_icon"></i>News</a
+            >
+          </li>
+          <li class="icon_text">
+            <a href="#" onclick="changePage('Get_the_app')"
+              ><i class="fas fa-download nav_icon"></i>Get the app</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="types_of_games_container">
+      <div class="types_of_games_content">
+        <button id="game">Football</button>
+        <button id="game">Hockey</button>
+        <button id="game">Basketball</button>
+        <button id="game">Tennis</button>
+        <button id="game">Cricket</button>
+      </div>
+
+      <button class="language-changer" onclick="toggleDropdown()">
+        <i class="fas fa-globe lang-icon"></i>
+        <span class="language-name">EN</span>
+      </button>
+    </div>
+
+    <div class="content_container">
+      <div class="left_option_container">
+        <div class="search_menu_option">
+          <i class="fas fa-search search_icon"
+            ><input
+              type="search"
+              name="search_games"
+              id="search_input"
+              placeholder="Search"
+          /></i>
+        </div>
+
+        <ul class="all_list_of_left_options">
+          <li class="list_of_left_option">
+            REGIONS<i
+              class="fas fa-chevron-right list_of_menu_options-icon"
+            ></i>
+          </li>
+
+          <div class="different_countries">
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+          </div>
+
+          <li class="list_of_left_option">
+            TEAMS<i class="fas fa-chevron-right list_of_menu_options-icon"></i>
+          </li>
+
+          <div class="different_countries">
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+          </div>
+
+          <li class="list_of_left_option">
+            COMPETITIONS<i
+              class="fas fa-chevron-right list_of_menu_options-icon"
+            ></i>
+          </li>
+
+          <div class="different_countries">
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+            <button><i fas fa-chevron-right countries_flag></i>England</button>
+          </div>
+        </ul>
+      </div>
+      <div class="menu_content_container">
+        <div class="date_menu_list">
+          <a href="#" id="live">LIVE</a>
+          <a href="#">SUN</a>
+          <a href="#">MON</a>
+          <a href="#">TUES</a>
+          <a href="#">WENS</a>
+          <a href="#">THURS</a>
+          <a href="#">FRI</a>
+          <a href="#">SAT</a>
+          <a><i class="fas fa-calendar-alt calender-icon"></i></a>
+        </div>
+
+        <ul class="all_list_of_menu_content">
+          <li class="list_of_menu_content">
+            <i class="fas fa-chevron-right games-logo"></i> Premier League<i
+              class="fas fa-chevron-right list_of_menu_content-icon"
+            ></i>
+          </li>
+          <div class="every_game_content">
+            <div class="lgame_vs">
+              <div class="lgame_time_vs">12:00</div>
+              <div class="vs">
+                <a href="#"><i class="fas fa-futbol game_icon"></i>A</a>
+                <a href="#"><i class="fas fa-futbol game_icon"></i>B</a>
+              </div>
+            </div>
+
+            <div class="rgame_favourite_icon">
+              <i class="fas fa-star onclick='' fav_icon"></i>
+            </div>
+          </div>
+
+          <li class="list_of_menu_content">
+            <i class="fas fa-chevron-right games-logo"></i> Laliga<i
+              class="fas fa-chevron-right list_of_menu_content-icon"
+            ></i>
+          </li>
+
+          <div class="every_game_content">
+            <div class="lgame_vs">
+              <div class="lgame_time_vs">12:00</div>
+              <div class="vs">
+                <a href="#"><i class="fas fa-futbol game_icon"></i>A</a>
+                <a href="#"><i class="fas fa-futbol game_icon"></i>B</a>
+              </div>
+            </div>
+
+            <div class="rgame_favourite_icon">
+              <i class="fas fa-star onclick='' fav_icon"></i>
+            </div>
+          </div>
+
+          <li class="list_of_menu_content">
+            <i class="fas fa-chevron-right games-logo"></i> Serie A<i
+              class="fas fa-chevron-right list_of_menu_content-icon"
+            ></i>
+          </li>
+          <div class="every_game_content">
+            <div class="lgame_vs">
+              <div class="lgame_time_vs">12:00</div>
+              <div class="vs">
+                <a href="#"><i class="fas fa-futbol game_icon"></i>A</a>
+                <a href="#"><i class="fas fa-futbol game_icon"></i>B</a>
+              </div>
+            </div>
+
+            <div class="rgame_favourite_icon">
+              <i class="fas fa-star onclick='' fav_icon"></i>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content" id="content">
+      <h1>Welcome to the Home Page</h1>
+      <p>This is the content for the home page.</p>
+    </div>
+
+    <!-- for javascript file input -->
+    <script>
+      function changePage(page) {
+        const contentDiv = document.getElementById("content");
+
+        if (page === "menu") {
+          contentDiv.innerHTML =
+            "<h1>Welcome to the menu</h1><p>This is the content for the menu page.</p>";
+        } else if (page === "Livescore") {
+          contentDiv.innerHTML =
+            "<h1>LiveScore </h1><p>This is the content for the LiveScore page.</p>";
+        } else if (page === "Scores") {
+          contentDiv.innerHTML =
+            "<h1>Scores</h1><p>This is the content for the Scores page.</p>";
+        } else if (page === "Favourites") {
+          contentDiv.innerHTML =
+            "<h1>Favourites</h1><p>This is the content for theFavourites page.</p>";
+        } else if (page === "News") {
+          contentDiv.innerHTML =
+            "<h1>News</h1><p>This is the content for the News page.</p>";
+        } else if (page === "Get_the_app") {
+          contentDiv.innerHTML =
+            "<h1>Get_the_app page</h1><p>This is the content for the Get_the_app page.</p>";
+        }
+      }
+
+      function toggleDropdown() {
+        alert("Language changed to English!"); // Replace with your language change logic
+      }
+    </script>
+  </body>
+</html>
